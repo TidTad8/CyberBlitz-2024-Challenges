@@ -12,7 +12,8 @@ USER pwn
 
 COPY --chown=pwn:users ./brainrot /home/pwn
 
-RUN echo "CyberBlitz{wh0_kn3w_8uff32_0v32f10w5_c4n_937_7h15_c0mp11c473d}" > /home/pwn/flag.txt
+RUN echo "CyberBlitz{you_are_the_alpha_wolf_and_your_level_10_gyatt_is_mewing_at_me}" \
+         > /home/pwn/flag.txt
 
 EXPOSE 30000
 

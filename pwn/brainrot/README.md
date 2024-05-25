@@ -1,6 +1,6 @@
 # Brain rot
 
-Leaking addresses to combat ASLR and using one_gadget to get a shell.
+Leaking address from got to get libc version, and using a one gadget to get a shell
 
 Creator - [@PlatyPew](https://github.com/PlatyPew)
 
@@ -16,7 +16,7 @@ Binary Exploitation
 
 ### Hint
 
-Is there another way to get a shell without need `rdi`?
+Is there another way to get a shell without needing `rdi`?
 
 ## Setup Guide
 
@@ -24,8 +24,7 @@ Is there another way to get a shell without need `rdi`?
 
 ## Distribution
 
-- brainrot: `2b4eec29bfccc31b36d94c6fee160857a514f7a2a7f6a735ea880beecd48b8e0`
-- libc.so.6: `6b69aa964830610275e94031012d42893ec9f4d7673cc1b7afc731b7e76d8691`
+- brainrot: `0d3d5cf8077272c88c2afa6f06a71fea7daef44263bae829c5ec767f5db3dfe5`
 
 ## Solution
 
