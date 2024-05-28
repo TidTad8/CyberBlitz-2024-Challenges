@@ -1,4 +1,4 @@
-# Brain rot
+# Brainrot
 
 Leaking address from got to get libc version, and using a one gadget to get a shell
 
@@ -16,7 +16,10 @@ Binary Exploitation
 
 ### Hint
 
-Is there another way to get a shell without needing `rdi`?
+-   Use the format string vulnerability to bypass pie and stack canary
+-   Use the format string vulnerability to leak offsets for functions in libc
+-   Use the format string vulnerability to bypass aslr for libc
+-   How can you get a shell with a lack of gadgets and space
 
 ## Setup Guide
 
@@ -24,7 +27,7 @@ Is there another way to get a shell without needing `rdi`?
 
 ## Distribution
 
-- brainrot: `0d3d5cf8077272c88c2afa6f06a71fea7daef44263bae829c5ec767f5db3dfe5`
+-   brainrot: `0d3d5cf8077272c88c2afa6f06a71fea7daef44263bae829c5ec767f5db3dfe5`
 
 ## Solution
 
