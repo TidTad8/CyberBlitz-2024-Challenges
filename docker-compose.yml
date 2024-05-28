@@ -4,7 +4,7 @@ services:
       context: ./pwn/brainrot/service
     container_name: brainrot
     ports:
-      - "30000:31337"
+      - "31337:30000"
     networks:
       - net0
     read_only: true
