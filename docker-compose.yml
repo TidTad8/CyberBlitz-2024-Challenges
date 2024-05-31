@@ -1,10 +1,11 @@
 services:
   brainrot:
+    image: brainrot
     build:
       context: ./pwn/brainrot/service
     container_name: brainrot
     ports:
-      - "31337:30000"
+      - "30000:30000"
     networks:
       - net0
     read_only: true
