@@ -17,4 +17,4 @@ USER pwn
 
 EXPOSE 30000
 
-CMD ["socat", "tcp-l:30000,fork,reuseaddr", "exec:/home/pwn/brainrot"]
+CMD ["socat", "tcp-l:30000,fork,reuseaddr", "exec:timeout 30 /home/pwn/brainrot"]
