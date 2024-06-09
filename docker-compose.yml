@@ -2,7 +2,7 @@ services:
   brainrot:
     image: brainrot
     build:
-      context: ./pwn/brainrot/service
+      context: ./Pwn/brainrot/service
     container_name: brainrot
     ports:
       - "30000:30000"
