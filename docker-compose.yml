@@ -1,0 +1,23 @@
+services:
+  brainrot:
+    build:
+      context: ./Pwn/brainrot/service
+    container_name: brainrot
+    ports:
+      - "30000:30000"
+    networks:
+      - net0
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          pids: 256
+      restart_policy:
+        condition: always
+        delay: 3s
+    cap_drop:
+      - ALL
+
+networks:
+  net0:
