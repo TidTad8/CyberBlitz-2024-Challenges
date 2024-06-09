@@ -1,5 +1,8 @@
 from pwn import *
 
+HOST = "localhost"
+PORT = 30001
+
 
 def fib(n):
     if n <= 1:
@@ -13,7 +16,7 @@ def fib(n):
     return b
 
 
-p = remote("localhost", 30001)
+p = remote(HOST, PORT)
 
 # Level 1
 p.sendlineafter(
@@ -33,4 +36,3 @@ p.sendlineafter(b"======= Level Three =======", enc)
 
 # Get flag
 log.success(p.recvall().decode().strip())
-
