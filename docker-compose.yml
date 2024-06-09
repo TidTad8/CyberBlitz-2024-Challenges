@@ -19,5 +19,26 @@ services:
     cap_drop:
       - ALL
 
+  ironoxide:
+    build:
+      context: ./Re/4Fe+3O2/service
+    container_name: ironoxide
+    ports:
+      - "30001:30001"
+    networks:
+      - net1
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          pids: 256
+      restart_policy:
+        condition: always
+        delay: 3s
+    cap_drop:
+      - ALL
+
 networks:
   net0:
+  net1:
