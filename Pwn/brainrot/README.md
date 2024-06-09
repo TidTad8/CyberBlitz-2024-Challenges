@@ -32,3 +32,7 @@ Binary Exploitation
 ## Solution
 
 TODO
+
+### Flag
+
+`CyberBlitz{you_are_the_alpha_wolf_and_your_level_10_gyatt_is_mewing_at_me}`
