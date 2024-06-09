@@ -1,6 +1,5 @@
 services:
   brainrot:
-    image: brainrot
     build:
       context: ./Pwn/brainrot/service
     container_name: brainrot
