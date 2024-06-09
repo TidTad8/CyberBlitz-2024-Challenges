@@ -12,7 +12,7 @@ Binary Exploitation
 
 > To enter the Skibidi Toilet, you must first prove that you are true sigma gyatt rizzler fanum tax (what am I even writing lol)
 >
-> Connect via `nc <ip address> 31337`
+> Connect via `nc <ip address> 30000`
 
 ### Hint
 

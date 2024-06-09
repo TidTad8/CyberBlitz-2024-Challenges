@@ -2,7 +2,7 @@
 from pwn import *
 
 HOST = "localhost"
-PORT = 31337
+PORT = 30000
 
 context.terminal = ['tmux', 'new-window', '-F', '#{pane_pid}', '-P']
 
