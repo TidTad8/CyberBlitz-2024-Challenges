@@ -8,7 +8,9 @@ fn levelone() -> bool {
     let rust = "Rust is an iron oxide, a usually reddish-brown oxide formed by the reaction of iron and oxygen in the catalytic presence of water or air moisture.";
 
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
 
     input.trim() == rust
 }
@@ -28,7 +30,9 @@ fn leveltwo() -> bool {
     println!("Here's your magic number: {}", random_number);
 
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
     let input = input.trim().parse::<u32>().expect("Not a number");
 
     return input == magic(random_number);
@@ -40,9 +44,12 @@ fn levelthree() -> bool {
     let key = "tasty".bytes().cycle();
 
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
 
-    let unencrypted_bytes = input.trim()
+    let unencrypted_bytes = input
+        .trim()
         .bytes()
         .zip(key)
         .map(|(byte, key_byte)| byte ^ key_byte)
@@ -55,7 +62,7 @@ fn levelthree() -> bool {
 
 fn get_flag() {
     let contents = fs::read_to_string("./flag.txt")
-        .expect("Should have been able to read the file");
+        .expect("If you're seeing this instead of the flag, please contact an administrator");
 
     println!("Congratulations! Here is your flag: {}", contents.trim());
 }
