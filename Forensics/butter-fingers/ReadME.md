@@ -1,4 +1,4 @@
-# Challenge #1: butter fingers
+# Challenge #1: butter-fingers
 
 Difficulty: Nil
 Prerequisites: Nil
