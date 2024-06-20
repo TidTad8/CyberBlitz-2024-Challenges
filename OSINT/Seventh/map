@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:kml="http://www.opengis.net/kml/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+    <name>Extended KML Document</name>
+    <description><![CDATA[
+        This is a sample KML document extended with filler content.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed ac tellus at lorem sodales consequat. Nullam rutrum neque eget nisi pharetra auctor.
+        Donec ac nisi eget velit bibendum laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+        Proin tincidunt erat ac turpis pulvinar lobortis.
+        Duis convallis ligula vitae nisi varius, ac viverra quam efficitur.
+        Fusce congue ipsum eu neque condimentum, sit amet vestibulum nulla varius.
+        Nunc malesuada lorem eget risus blandit, sit amet aliquet justo pharetra.
+    ]]></description>
+
+    <!-- Schema Definition -->
+    <Schema name="__managed_schema" id="__managed_schema">
+        <SimpleField type="int" name="018A8AC2DF3163F6F489">
+            <displayName>Accuracy (m)</displayName>
+        </SimpleField>
+        <SimpleField type="string" name="additional_info">
+            <displayName>Additional Information</displayName>
+        </SimpleField>
+    </Schema>
+
+    <!-- Cascading Style 1 -->
+    <gx:CascadingStyle kml:id="__managed_style_22AC4A5A223163F6F480">
+        <Style>
+            <IconStyle>
+                <scale>1.2</scale>
+                <Icon>
+                    <href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+                </Icon>
+                <hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+            </IconStyle>
+            <LabelStyle>
+                <scale>1.1</scale>
+                <color>ff0000ff</color>
+            </LabelStyle>
+            <LineStyle>
+                <color>ff2dc0fb</color>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle>
+                <color>40ffffff</color>
+            </PolyStyle>
+            <BalloonStyle>
+                <text><![CDATA[
+                    <h3>$[name]</h3>
+                    <p><i>Additional Information:</i> $[additional_info]</p>
+                    <p>Coordinates: $[coordinates]</p>
+                ]]></text>
+            </BalloonStyle>
+        </Style>
+    </gx:CascadingStyle>
+
+    <!-- Cascading Style 2 -->
+    <gx:CascadingStyle kml:id="__managed_style_1230D040B03163F6F480">
+        <Style>
+            <IconStyle>
+                <Icon>
+                    <href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+                </Icon>
+                <hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+            </IconStyle>
+            <LabelStyle>
+                <scale>0.9</scale>
+                <color>ff00ff00</color>
+            </LabelStyle>
+            <LineStyle>
+                <color>ff2dc0fb</color>
+                <width>2.66667</width>
+            </LineStyle>
+            <PolyStyle>
+                <color>80ff0000</color>
+            </PolyStyle>
+            <BalloonStyle>
+                <displayMode>default</displayMode>
+            </BalloonStyle>
+        </Style>
+    </gx:CascadingStyle>
+
+    <!-- Style Map -->
+    <StyleMap id="__managed_style_0A7344E7F23163F6F480">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#__managed_style_1230D040B03163F6F480</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#__managed_style_22AC4A5A223163F6F480</styleUrl>
+        </Pair>
+    </StyleMap>
+
+    <!-- Placemark 1 -->
+    <Placemark id="09DC95B42C3163F6F47C">
+        <name>Sample Placemark 1</name>
+        <description><![CDATA[
+            <p>This is the first sample placemark.</p>
+            <p>Additional details go here.</p>
+        ]]></description>
+        <LookAt>
+            <longitude>103.767451066354</longitude>
+            <latitude>1.357935769998519</latitude>
+            <altitude>24.1094777130896</altitude>
+            <heading>-65.71616782784221</heading>
+            <tilt>30.28201126893042</tilt>
+            <gx:fovy>56.98773148148071</gx:fovy>
+            <range>28.23783715119135</range>
+            <altitudeMode>absolute</altitudeMode>
+        </LookAt>
+        <styleUrl>#__managed_style_0A7344E7F23163F6F480</styleUrl>
+        <ExtendedData>
+            <SchemaData schemaUrl="#__managed_schema">
+                <SimpleData name="018A8AC2DF3163F6F489">0</SimpleData>
+                <SimpleData name="additional_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</SimpleData>
+            </SchemaData>
+        </ExtendedData>
+        <Point>
+            <extrude>1</extrude>
+            <coordinates>103.7674671428754,1.357930017475567,23.95772111092725</coordinates>
+        </Point>
+    </Placemark>
+
+    <!-- Placemark 2 -->
+    <Placemark id="F9A4827BC43163F6F493">
+        <name>Sample Placemark 2</name>
+        <description><![CDATA[
+            <p>This is the second sample placemark.</p>
+            <p>Additional details go here.</p>
+        ]]></description>
+        <LookAt>
+            <longitude>103.768451066354</longitude>
+            <latitude>1.358935769998519</latitude>
+            <altitude>25.1094777130896</altitude>
+            <heading>-65.71616782784221</heading>
+            <tilt>30.28201126893042</tilt>
+            <gx:fovy>56.98773148148071</gx:fovy>
+            <range>30.23783715119135</range>
+            <altitudeMode>absolute</altitudeMode>
+        </LookAt>
+        <styleUrl>#__managed_style_22AC4A5A223163F6F480</styleUrl>
+        <ExtendedData>
+            <SchemaData schemaUrl="#__managed_schema">
+                <SimpleData name="018A8AC2DF3163F6F489">1</SimpleData>
+                <SimpleData name="additional_info">Sed ac tellus at lorem sodales consequat.</SimpleData>
+            </SchemaData>
+        </ExtendedData>
+        <Point>
+            <extrude>1</extrude>
+            <coordinates>103.7684671428754,1.358930017475567,24.95772111092725</coordinates>
+        </Point>
+    </Placemark>
+
+    <!-- Placemark 3 -->
+<Placemark id="C8F79B23E03163F6F49A">
+    <name>Sample Placemark 3</name>
+    <description><![CDATA[
+        <p>This is the third sample placemark.</p>
+        <p>Additional details go here.</p>
+    ]]></description>
+    <LookAt>
+        <longitude>103.769451066354</longitude>
+        <latitude>1.359935769998519</latitude>
+        <altitude>26.1094777130896</altitude>
+        <heading>-65.71616782784221</heading>
+        <tilt>30.28201126893042</tilt>
+        <gx:fovy>56.98773148148071</gx:fovy>
+        <range>32.23783715119135</range>
+        <altitudeMode>absolute</altitudeMode>
+    </LookAt>
+    <styleUrl>#__managed_style_22AC4A5A223163F6F480</styleUrl>
+    <ExtendedData>
+        <SchemaData schemaUrl="#__managed_schema">
+            <SimpleData name="018A8AC2DF3163F6F489">2</SimpleData>
+            <SimpleData name="additional_info">Nullam rutrum neque eget nisi pharetra auctor.</SimpleData>
+        </SchemaData>
+    </ExtendedData>
+    <Point>
+        <extrude>1</extrude>
+        <coordinates>103.7694671428754,1.359930017475567,25.95772111092725</coordinates>
+    </Point>
+</Placemark>
+
+<!-- Placemark 4 -->
+<Placemark id="EBA24D1C993163F6F4A1">
+    <name>Sample Placemark 4</name>
+    <description><![CDATA[
+        <p>This is the fourth sample placemark.</p>
+        <p>Additional details go here.</p>
+    ]]></description>
+    <LookAt>
+        <longitude>103.770451066354</longitude>
+        <latitude>1.360935769998519</latitude>
+        <altitude>27.1094777130896</altitude>
+        <heading>-65.71616782784221</heading>
+        <tilt>30.28201126893042</tilt>
+        <gx:fovy>56.98773148148071</gx:fovy>
+        <range>34.23783715119135</range>
+        <altitudeMode>absolute</altitudeMode>
+    </LookAt>
+    <styleUrl>#__managed_style_1230D040B03163F6F480</styleUrl>
+    <ExtendedData>
+        <SchemaData schemaUrl="#__managed_schema">
+            <SimpleData name="018A8AC2DF3163F6F489">3</SimpleData>
+            <SimpleData name="additional_info">Donec ac nisi eget velit bibendum laoreet.</SimpleData>
+        </SchemaData>
+    </ExtendedData>
+    <Point>
+        <extrude>1</extrude>
+        <coordinates>103.7704671428754,1.360930017475567,26.95772111092725</coordinates>
+    </Point>
+</Placemark>
+
+<!-- Placemark 3 -->
+<Placemark id="C8F79B23E03163F6F49A">
+    <name>Sample Placemark 3</name>
+    <description><![CDATA[
+        <p>This is the third sample placemark.</p>
+        <p>Additional details go here.</p>
+    ]]></description>
+    <LookAt>
+        <longitude>103.769451066354</longitude>
+        <latitude>1.359935769998519</latitude>
+        <altitude>26.1094777130896</altitude>
+        <heading>-65.71616782784221</heading>
+        <tilt>30.28201126893042</tilt>
+        <gx:fovy>56.98773148148071</gx:fovy>
+        <range>32.23783715119135</range>
+        <altitudeMode>absolute</altitudeMode>
+    </LookAt>
+    <styleUrl>#__managed_style_22AC4A5A223163F6F480</styleUrl>
+    <ExtendedData>
+        <SchemaData schemaUrl="#__managed_schema">
+            <SimpleData name="018A8AC2DF3163F6F489">2</SimpleData>
+            <SimpleData name="additional_info">Nullam rutrum neque eget nisi pharetra auctor.</SimpleData>
+        </SchemaData>
+    </ExtendedData>
+    <Point>
+        <extrude>1</extrude>
+        <coordinates>103.7694671428754,1.359930017475567,25.95772111092725</coordinates>
+    </Point>
+</Placemark>
+
+<!-- Placemark 4 -->
+<Placemark id="EBA24D1C993163F6F4A1">
+    <name>Sample Placemark 4</name>
+    <description><![CDATA[
+        <p>This is the fourth sample placemark.</p>
+        <p>Additional details go here.</p>
+    ]]></description>
+    <LookAt>
+        <longitude>103.770451066354</longitude>
+        <latitude>1.360935769998519</latitude>
+        <altitude>27.1094777130896</altitude>
+        <heading>-65.71616782784221</heading>
+        <tilt>30.28201126893042</tilt>
+        <gx:fovy>56.98773148148071</gx:fovy>
+        <range>34.23783715119135</range>
+        <altitudeMode>absolute</altitudeMode>
+    </LookAt>
+    <styleUrl>#__managed_style_1230D040B03163F6F480</styleUrl>
+    <ExtendedData>
+        <SchemaData schemaUrl="#__managed_schema">
+            <SimpleData name="018A8AC2DF3163F6F489">3</SimpleData>
+            <SimpleData name="additional_info">Donec ac nisi eget velit bibendum laoreet.</SimpleData>
+        </SchemaData>
+    </ExtendedData>
+    <Point>
+        <extrude>1</extrude>
+        <coordinates>103.7704671428754,1.360930017475567,26.95772111092725</coordinates>
+    </Point>
+</Placemark>
+
+<!-- Cascading Style 3 -->
+<gx:CascadingStyle kml:id="__managed_style_6B320F76A03163F6F4A8">
+    <Style>
+        <IconStyle>
+            <scale>1.5</scale>
+            <Icon>
+                <href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+            </Icon>
+            <hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+        </IconStyle>
+        <LabelStyle>
+            <color>ff00ffff</color>
+        </LabelStyle>
+        <LineStyle>
+            <color>ff00ff00</color>
+            <width>5</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>80ffff00</color>
+        </PolyStyle>
+        <BalloonStyle>
+            <text><![CDATA[
+                <h3>$[name]</h3>
+                <p><i>Additional Information:</i> $[additional_info]</p>
+                <p>Coordinates: $[coordinates]1°21'28"N 103°46'02"E</coordinates></p>
+            ]]></text>
+        </BalloonStyle>
+    </Style>
+</gx:CascadingStyle>
+
+<!-- Cascading Style 4 -->
+<gx:CascadingStyle kml:id="__managed_style_A8BF3E45953163F6F4AF">
+    <Style>
+        <IconStyle>
+            <scale>1.0</scale>
+            <Icon>
+                <href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+            </Icon>
+            <hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+        </IconStyle>
+        <LabelStyle>
+            <scale>0.8</scale>
+            <color>ff0000ff</color>
+        </LabelStyle>
+        <LineStyle>
+            <color>ff800080</color>
+            <width>3</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>80ff00ff</color>
+        </PolyStyle>
+        <BalloonStyle>
+            <displayMode>default</displayMode>
+        </BalloonStyle>
+    </Style>
+</gx:CascadingStyle>
+
+
+
+</Document>
+</kml>
