@@ -1,3 +1,5 @@
+Creator: <a href="https://github.com/TidTad8">@TidTad8</a>
+
 # Preperation
 1. Run generate_keys.py
 2. encrypt_flag.py
