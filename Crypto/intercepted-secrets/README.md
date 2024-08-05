@@ -14,5 +14,8 @@ I think the encryption being used is AES, the IV should be included at the start
 4. Since the challenge context is a MITM attack, the shared keys between alice & evil, and bob & evil can be derived. 
 5. The shared keys can then be used to decryot the 2 encrypted messages, 1 from each user, and combined to get the flag.
 
+For more info:
+https://medium.com/@lydia.cao26/diffie-hellman-key-exchange-basics-and-vulnerabilities-afc51342988e
+
 # Flag
 CyberBlitz{DH_n_M4n_1n_Th3_M1ddl3}
