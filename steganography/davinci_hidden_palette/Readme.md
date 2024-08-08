@@ -5,7 +5,7 @@ Da Vinci’s Hidden Palette
 “Leonardo da Vinci was not just a master painter but also a master of hidden messages. This challenge involves uncovering a secret hidden within his famous works. Find the hidden image and look within its colours.”
 
 ## Hints, if any
-Optional hints: 
+Optional hints (give if necessary): 
 Bitwise operation
 LSB in R.G.B
 
