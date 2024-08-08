@@ -2,12 +2,12 @@
 Hydra Intel
 
 ## Challenge Description
-Captain America has found the location to one of the hydra bases that hides an important intel for shield. 
+Captain America has found the location to one of the hydra bases that hides an important intel for Shield. 
 But to get there, he gives you the following procedures. Can you help him?
 Firstly, enter the Hydra Base block A, door 32.
-Then inside the room, look for a computer by the window, an instruction to proceed to Hydra Army Base B will be displayed.
-Once you reach Base Beta, enter the code 58 to unlock the door. Inside there is a hidden document you wanted.
-Before you leave the base, you decided to give these hydra agents 13 rotting apples.
+Then inside the room, look for a computer by the window, an instruction to proceed to Hydra Base block B will be displayed.
+Once you reach Hydra Base block B, enter the code 58 to unlock the door. Inside there is a hidden document you wanted.
+Before you leave the base, you decided to give these hydra agents 13 rotten apples.
 Decode the cipher to get the hidden intel.
 
 # Solution
