@@ -6,8 +6,8 @@ Da Vinci’s Hidden Palette
 
 ## Hints, if any
 Optional hints (give if necessary): 
-Bitwise operation
-LSB in R.G.B
+1. Bitwise operation needed
+2. LSB in R.G.B
 
 ## Procedure
 Follow writeup (docx) file
