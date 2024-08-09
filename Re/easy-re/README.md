@@ -1,5 +1,5 @@
 # Challenge Preperation
-gcc -o baby-re baby-re.c
+gcc -o easy-re easy-re.c
 
 # Challenge Description
 NIL
@@ -9,7 +9,7 @@ Decompile given binary file to get source code.
 
 I used <a href="https://github.com/avast/retdec">Ret Decompiler</a> 
 
-`./retdec-decompiler ~/Desktop/REEEE/baby-re`
+`./retdec-decompiler easy-re`
 
 Got C file among other files
 
