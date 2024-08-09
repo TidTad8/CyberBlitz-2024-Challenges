@@ -1,3 +1,5 @@
+Creator: <a href="https://github.com/TidTad8">@TidTad8</a>
+
 # Challenge Preperation
 gcc -o easy-re easy-re.c
 
