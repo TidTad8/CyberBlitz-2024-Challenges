@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hehe</title>
+    <style>
+        @keyframes moveRobot {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(50vw, 10vh); }
+            50% { transform: translate(20vw, 50vh); }
+            75% { transform: translate(70vw, 30vh); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes moveHacker {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+        }
+    
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+    
+        .hacker {
+            font-size: 24px;
+            animation: moveHacker 2s infinite;
+            text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+        }
+    
+        .hacker::before {
+            content: ">";
+            margin-right: 10px;
+        }
+
+        .robot {
+            width: 50px;
+            height: 50px;
+            background-color: #00FF00;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+            animation: moveRobot 10s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .robot::before, .robot::after {
+            content: '';
+            position: absolute;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .robot::before {
+            width: 10px;
+            height: 10px;
+            top: 10px;
+            left: 12px;
+        }
+
+        .robot::after {
+            width: 10px;
+            height: 10px;
+            top: 10px;
+            right: 12px;
+        }
+
+        .robot .mouth {
+            width: 20px;
+            height: 5px;
+            background-color: black;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hacker">CyberBlitz{r0b0t$_h4v3_f33LinGs_2}</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const numberOfRobots = 8;
+            const body = document.body;
+
+            for (let i = 0; i < numberOfRobots; i++) {
+                const robot = document.createElement('div');
+                robot.className = 'robot';
+                robot.innerHTML = '<div class="mouth"></div>';
+                body.appendChild(robot);
+
+                const randomTop = Math.random() * 100;
+                const randomLeft = Math.random() * 100;
+                robot.style.top = randomTop + 'vh';
+                robot.style.left = randomLeft + 'vw';
+                robot.style.animationDelay = (i * 2) + 's';
+            }
+        });
+    </script>
+</body>
+</html>
