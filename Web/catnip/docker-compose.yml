@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  catnip_client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - catnip_api
+
+  catnip_api:
+    build:
+      context: ./api/catnip_api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api/catnip_api:/usr/src/app
