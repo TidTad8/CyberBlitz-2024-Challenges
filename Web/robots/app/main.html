@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>We love robots</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #00ffff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        
+        p {
+            color: #b0b0b0;
+            line-height: 1.8;
+            font-size: 1.2em;
+        }
+
+        .robot-box {
+            width: 150px;
+            height: 200px;
+            background-color: #00ffff;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 0 20px #df3308;
+        }
+
+        .robot-box::before, .robot-box::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-color: #f30b0b;
+            position: absolute;
+            top: 30px;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        .robot-box::before {
+            left: 30px;
+        }
+
+        .robot-box::after {
+            right: 30px;
+        }
+
+        .robot-mouth {
+            width: 60px;
+            height: 10px;
+            background-color: #1a1a1a;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .robot-antenna {
+            width: 10px;
+            height: 50px;
+            background-color: #00ffff;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        .robot-antenna::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #00ffff;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .blinking {
+            animation: blink 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="robot-box">
+            <div class="robot-antenna"></div>
+            <div class="robot-mouth"></div>
+        </div>
+        <h1>Do you like robots?</h1>
+        <p>Robots are so cool, am i right ?</p>
+        <p class="blinking">Beep boop beep...</p>
+    </div>
+</body>
+</html>
