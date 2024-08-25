@@ -16,9 +16,9 @@ Reverse Engineering
 
 ### Hint
 
--   First step seems to be a simple comparison
--   What is this magic function? It looks recursive.
--   There seems to be 2 functions named `ironoxide::levelthree`
+- First step seems to be a simple comparison
+- What is this magic function? It looks recursive.
+- There seems to be 2 functions named `ironoxide::levelthree`
 
 ## Setup Guide
 
@@ -26,7 +26,7 @@ Reverse Engineering
 
 ## Distribution
 
--   ironoxide: `a7cb74d3639f272c1bef30273beaffdbb43ba606dee6d2a708d3027239ae07e8`
+- ironoxide: `0047d6e9fd94ad4d14337735066a8161f455facc32a6503767aadf5e5bb64bfa`
 
 ## Solution
 
@@ -34,4 +34,6 @@ TODO
 
 ### Flag
 
-`CyberBlitz{youtu.be/watch?v=03H1cWj2Kfc}`
+- `CyberBlitz{rust_makes_malware_reverse_engineering_10x_harder}`
+- `CyberBlitz{imagine_trademarking_the_name_rust}`
+- `CyberBlitz{youtu.be/watch?v=03H1cWj2Kfc}`

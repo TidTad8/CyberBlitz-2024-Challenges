@@ -2,7 +2,7 @@ use rand::Rng;
 use std::fs;
 use std::io;
 
-fn levelone() -> bool {
+fn level_one() -> bool {
     println!("======== Level One ========");
 
     let rust = "Rust is an iron oxide, a usually reddish-brown oxide formed by the reaction of iron and oxygen in the catalytic presence of water or air moisture.";
@@ -23,7 +23,7 @@ fn magic(num: u32) -> u32 {
     return magic(num - 1) + magic(num - 2);
 }
 
-fn leveltwo() -> bool {
+fn level_two() -> bool {
     println!("======== Level Two ========");
 
     let random_number = rand::thread_rng().gen_range(30..40);
@@ -38,7 +38,7 @@ fn leveltwo() -> bool {
     return input == magic(random_number);
 }
 
-fn levelthree() -> bool {
+fn level_three() -> bool {
     println!("======= Level Three =======");
 
     let key = "tasty".bytes().cycle();
@@ -60,25 +60,26 @@ fn levelthree() -> bool {
     return text.trim() == "Rust was created because the creator had to climb 21 floors.";
 }
 
-fn get_flag() {
-    let contents = fs::read_to_string("./flag.txt")
+fn get_flag(flag_name: &str) {
+    let contents = fs::read_to_string(flag_name)
         .expect("If you're seeing this instead of the flag, please contact an administrator");
 
     println!("Congratulations! Here is your flag: {}", contents.trim());
 }
 
 fn main() {
-    if !levelone() {
+    if !level_one() {
         return;
     }
+    get_flag("./flag1.txt");
 
-    if !leveltwo() {
+    if !level_two() {
         return;
     }
+    get_flag("./flag2.txt");
 
-    if !levelthree() {
+    if !level_three() {
         return;
     }
-
-    get_flag();
+    get_flag("./flag3.txt");
 }

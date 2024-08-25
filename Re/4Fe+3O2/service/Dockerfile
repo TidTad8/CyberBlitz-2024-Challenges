@@ -10,8 +10,9 @@ WORKDIR /home/re
 
 COPY --chown=root:root ./ironoxide /home/re
 
-RUN echo "CyberBlitz{youtu.be/watch?v=03H1cWj2Kfc}" \
-         > /home/re/flag.txt
+RUN echo "CyberBlitz{rust_makes_malware_reverse_engineering_10x_harder}" > /home/re/flag1.txt && \
+    echo "CyberBlitz{imagine_trademarking_the_name_rust}" > /home/re/flag2.txt && \
+    echo "CyberBlitz{youtu.be/watch?v=03H1cWj2Kfc}" > /home/re/flag3.txt
 
 USER re
 
