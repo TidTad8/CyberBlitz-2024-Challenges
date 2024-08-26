@@ -59,7 +59,28 @@ services:
     cap_drop:
       - ALL
 
+  octrays:
+    build:
+      context: ./Web/octrays/service
+    container_name: octrays
+    ports:
+      - "30003:8000"
+    networks:
+      - net3
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          pids: 256
+      restart_policy:
+        condition: always
+        delay: 3s
+    cap_drop:
+      - ALL
+
 networks:
   net0:
   net1:
   net2:
+  net3:
