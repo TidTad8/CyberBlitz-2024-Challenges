@@ -39,6 +39,27 @@ services:
     cap_drop:
       - ALL
 
+  jameswebtelephone:
+    build:
+      context: ./Web/jameswebtelephone/service
+    container_name: jameswebtelephone
+    ports:
+      - "30002:8000"
+    networks:
+      - net2
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          pids: 256
+      restart_policy:
+        condition: always
+        delay: 3s
+    cap_drop:
+      - ALL
+
 networks:
   net0:
   net1:
+  net2:

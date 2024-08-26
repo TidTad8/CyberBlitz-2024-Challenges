@@ -1,0 +1,3 @@
+[submodule "Web/jameswebtelescope/solution/HashPump-partialhash"]
+	path = Web/jameswebtelephone/solution/HashPump-partialhash
+	url = https://github.com/mheistermann/HashPump-partialhash.git
