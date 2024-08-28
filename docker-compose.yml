@@ -79,8 +79,29 @@ services:
     cap_drop:
       - ALL
 
+  babypwn:
+    build:
+      context: ./Pwn/babypwn/service
+    container_name: babypwn
+    ports:
+      - "30004:30004"
+    networks:
+      - net4
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          pids: 256
+      restart_policy:
+        condition: always
+        delay: 3s
+    cap_drop:
+      - ALL
+
 networks:
   net0:
   net1:
   net2:
   net3:
+  net4:
