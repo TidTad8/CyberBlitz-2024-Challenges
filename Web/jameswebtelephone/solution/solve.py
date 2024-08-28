@@ -40,9 +40,14 @@ def main():
     header = base64.b64decode(b64_header.encode())
     data = base64.b64decode(b64_data.encode())
 
+    sig = base64.b64decode(b64_signature.encode()).hex()
+
+    print(f"[+] Current hash: {sig}")
+    print(f"[+] Current data:", data)
+
     result = subprocess.run([
         './HashPump-partialhash/hashpump', '-k', '32', '-d', header + data, '-s',
-        base64.b64decode(b64_signature.encode()).hex(), '-a', 'name:administrator;'
+        sig, '-a', 'name:administrator;'
     ],
                             capture_output=True,
                             text=True)
@@ -67,6 +72,9 @@ def main():
     if response.status_code == 200:
         flag = json.loads(response.text)["message"]
         print(f"[+] Flag: {flag}")
+    else:
+        print("[-] Something went wrong, re-executing")
+        main()
 
 
 if __name__ == "__main__":
