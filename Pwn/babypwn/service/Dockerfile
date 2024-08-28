@@ -1,7 +1,8 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && \
-    apt-get install -y socat && \
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y socat libc6:i386 && \
     apt-get clean
 
 RUN useradd -m -g users -s /bin/bash pwn
