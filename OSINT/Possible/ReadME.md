@@ -21,3 +21,12 @@ However, the flag will be in dec form from the ASCII table and to be converted t
 
 
 *Flag:* ~~CyberBlitz{s33ms_l1k3_1ts_n0t_th4t_1mp0ss1bl3_;)}~~
+
+
+video links and flag breakdown:
+https://vm.tiktok.com/ZTFRnQ2kF/
+67 121 98 101 114 66 108 105 116 122 123 115 51 51 109 115
+https://vm.tiktok.com/ZTFRnCgbe/
+95 108 49 107 51 95 49 116 115 95 110 48 116 95 116 104 52
+https://vm.tiktok.com/ZTFRnr8SJ/
+116 95 49 109 112 48 115 115 49 98 108 51 95 59 41 125
