@@ -1,0 +1,10 @@
+version: '3'
+name: sauce
+services:
+ web:
+   build: .
+   ports:
+    - "8087:80"
+   volumes:
+    - ./sandbox.ini:/usr/local/etc/php/conf.d/sandbox.ini
+    - ./flag_B4CK_L1K3_I_NEVERLEFT:/var/www/flag_h0w2execute_arb1trary_c0de
