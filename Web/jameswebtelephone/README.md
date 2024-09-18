@@ -29,7 +29,20 @@ None given
 
 ## Solution
 
-TODO
+A classic hash length extension attack.
+
+Instead of using a HMAC, it uses this.
+
+```python
+validate_signature = hashlib.sha256(SECRET + header + data).digest()
+```
+
+This allows us to add on to the append data and calculate the new hash without knowing what `SECRET` is.
+
+You can use hashpump to generate the new hash.
+All we have to do is to first generate the initial token and extract out each field.
+Next, append `name:b"name:administrator;` and recalculate the hash.
+Update the JWT and send a GET request to the `/api/flag` endpoint.
 
 ### Flag
 
