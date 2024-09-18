@@ -16,7 +16,7 @@ Web
 
 ### Hint
 
-None given
+- The directory was uploaded from macOS
 
 ## Setup Guide
 
@@ -27,6 +27,10 @@ None given
 None given
 
 ## Solution
+
+Use a directory scanner to find that there is a `.DS_Store` file.
+
+Download it and view the directory contents.
 
 ```bash
 python3 parse.py .DS_Store
