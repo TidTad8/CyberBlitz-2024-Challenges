@@ -114,7 +114,9 @@ CyberBlitz{c4n_y0u_r34lly_f1nd_th3_r34l_0n3}
 - Server logs are provided to the players
 - Trails of threat actor can be traced 
 - players are to conduct an investigation 
-- Determine the flag 
+- Determine the flag (How?)
+- Flag is split into two parts and can be found in leaked and flag folder. The contents are encoded with secret key which can be found after investigation. Key #1: purple (Solved via riddle) Key #2 SingaporeInstituteOfTechnology (Solved via looking through ACRA csv)
+- Combine both parts to get completed flag
 
 Twist:
 - leaked folder holds one half of flag
