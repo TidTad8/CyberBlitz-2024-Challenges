@@ -1,0 +1,25 @@
+version: '3'
+services:
+  robots:
+    build:
+      context: .  # Refers to the current directory where the Dockerfile is located
+    container_name: robots
+    ports:
+      - "8000:8000"  # Exposes port 8000
+    networks:
+      - net0
+    read_only: true  # Makes the filesystem read-only for security
+    deploy:
+      resources:
+        limits:
+          memory: 128M  # Limit memory usage
+          pids: 256     # Limit the number of processes
+      restart_policy:
+        condition: always  # Always restart the container on failure
+        delay: 3s          # Restart delay
+    cap_drop:
+      - ALL  # Drops all unnecessary capabilities for security
+
+networks:
+  net0:
+    driver: bridge  # Uses a bridged network
