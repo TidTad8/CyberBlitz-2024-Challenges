@@ -4,7 +4,8 @@ RUN apt-get update && \
     apt-get install -y socat && \
     apt-get clean
 
-RUN useradd -m -g users -s /bin/bash pwn
+RUN useradd -m -g users -s /bin/bash pwn && \
+    chown root:root /home/pwn && chmod 755 /home/pwn
 
 WORKDIR /home/pwn
 
