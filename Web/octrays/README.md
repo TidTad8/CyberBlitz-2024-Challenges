@@ -32,22 +32,24 @@ Use a directory scanner to find that there is a `.DS_Store` file.
 
 Download it and view the directory contents.
 
-```bash
-python3 parse.py .DS_Store
+Use Python `ds_store` module to see the list of files.
+
+```python
+from ds_store import DSStore
+with DSStore.open("DS_Store") as ds:
+    for item in ds:
+            print(item)
+
 ```
 
 ```text
-alpha20_cf9e67
-        Icon location: x 67px, y 44px, 0xffffffffffff0000
-app.py
-        Icon location: x 186px, y 60px, 0xffffffffffff0000
-index.html
-        Icon location: x 285px, y 46px, 0xffffffffffff0000
-pricing.html
-        Icon location: x 388px, y 51px, 0xffffffffffff0000
+<alpha20_cf9e67 b'Iloc'>
+<app.py b'Iloc'>
+<index.html b'Iloc'>
+<pricing.html b'Iloc'>
 ```
 
-Access `/alpha20_cf9e67` and get the flag.
+Access `/alpha20_cf9e67` and get the flag from `flag.txt`.
 
 ### Flag
 
