@@ -183,6 +183,12 @@ def get_shell(binary_path, libc_path):
 
 
 if __name__ == "__main__":
+    # Ensure that pwninit is installed
+    pwninit = "/usr/bin/pwninit"
+
+    if not os.path.exists(pwninit):
+        raise Exception("Pwninit not found. Please install pwninit from https://github.com/io12/pwninit")
+
     libc = "./libc.so.6"
     binary = "./brainrot"
     binary_patched = "./brainrot_patched"
@@ -197,7 +203,7 @@ if __name__ == "__main__":
         copy(libc_path, libc)
 
         # Patch the binary
-        _, stderr = subprocess.Popen(["pwninit", "--no-template", "--bin", binary, "--libc",
+        _, stderr = subprocess.Popen([pwninit, "--no-template", "--bin", binary, "--libc",
                                       libc]).communicate()
 
         if stderr:
