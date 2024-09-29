@@ -11,9 +11,10 @@ class GetFile(http.server.SimpleHTTPRequestHandler):
         super().do_GET()
 
 
-def run_server(port=8000):
+def run_server(port: int = 8000):
     handler = GetFile
-    with socketserver.TCPServer(("", port), handler) as httpd:
+    socketserver.ThreadingTCPServer.allow_reuse_address = True
+    with socketserver.ThreadingTCPServer(("", port), handler) as httpd:
         print(f"Serving at port {port}")
         httpd.serve_forever()
 
