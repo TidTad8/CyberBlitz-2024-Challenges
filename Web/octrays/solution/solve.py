@@ -3,8 +3,8 @@
 from ds_store import DSStore
 import requests
 
-HOST = "cyberblitz-octrays.chals.io"
-PORT = 443
+HOST = "localhost"
+PORT = 30003
 
 r = requests.get(f"https://{HOST}:{PORT}/.DS_Store", stream=True)
 
