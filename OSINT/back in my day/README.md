@@ -20,5 +20,15 @@ Looking through the top few results, found the following: https://archive.org/de
 
 Sure enough, this is the cover album including Big Boss Man as the first song
 
+# Hint: The name of this album should be Bats & Bugs Music
+
+Even though Internet Archive is down due to the recent DOS, we can still attempt to do a Google search as its index is based on a snapshot of the site from when it was last crawled. Finding out the song name from the audio and with the challenge description, use a simple Google search query:
+
+```"internet archive" "1985" "big boss man"```
+
+Under Images, we see one of the first few results show an image with the same description as the hint, which reveals the band name:
+
+![image](https://github.com/user-attachments/assets/5a82ef18-6d00-46dd-a170-bebb66a09a92)
+
 # Flag
 CyberBlitz{BIG_BOSS_MAN_JAKE'S_LEG}
