@@ -5,6 +5,7 @@ Repository of CTF challenges for CyberBlitz 2024.
 Special thanks to the following contributors:
 - Student Volunteers - <a href="https://github.com/PlatyPew">PlatyPew</a>, <a href="https://github.com/AnuragP170">AnuragP170</a>, <a href="https://github.com/gralf3606">gralf3606</a>, <a href="https://github.com/loligoshujinsama">loligoshujinsama</a>, <a href="https://github.com/wqyeo">wqyeo</a>
 - Faculty - <a href="https://github.com/sbakiras">Prof Spiros</a>
+- SIT N0H4TS EXCO - <a href="https://github.com/TidTad8">TidTad8</a>, <a href="https://github.com/yhdeon">yhdeon</a>, <a href="https://github.com/remo11201">remo11201</a>
 
 # Overview of Challenges
 
