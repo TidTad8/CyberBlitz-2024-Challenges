@@ -30,5 +30,7 @@ Under Images, we see one of the first few results show an image with the same de
 
 ![image](https://github.com/user-attachments/assets/5a82ef18-6d00-46dd-a170-bebb66a09a92)
 
+![image](https://github.com/user-attachments/assets/871dc5d2-3d6e-4991-8803-d7dd0dc95a05)
+
 # Flag
 CyberBlitz{BIG_BOSS_MAN_JAKE'S_LEG}
